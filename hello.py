@@ -1,7 +1,10 @@
-from flask import Flask, redirect, url_for, request, render_template
+from flask import Flask, redirect, url_for, request, render_template, flash
 from actual import *
 
 app= Flask(__name__)
+app.config['SECRET_KEY'] = 'a88a26f4a54e74b3054b40f709f5781aadbed9558c941576'
+
+jobs = [{'Job_ID': 1, 'Job_Title': 'Software Engineer'}]
 
 @app.route("/")
 def home():
