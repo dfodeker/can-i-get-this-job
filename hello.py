@@ -7,9 +7,16 @@ app= Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route("/jobs")
+@app.route("/jobs", methods=["GET", "POST"])
 def jobs():
-    return render_template('actual.html')
+    if request.method == "POST":
+        user = request.form['nm']
+        return redirect(url_for("user", usr=user))
+    else:
+        return render_template('actual.html')
+@app.route("/user/<usr>")
+def user(usr):
+    return f"<h1>Hello {usr}</h1>"
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -1,81 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Can I get this job?</title>
-    <script src="https://kit.fontawesome.com/8f223cdd94.js" crossorigin="anonymous"></script>
-   <style>
-       @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
-   </style> 
+{% extends "base.html" %}
+{% block title %}Login Page{% endblock %}
 
-</head>
-<body>
-
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="index.html">
-                <img src="assets/can-i.svg" width="112" height="28">
-            </a>
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<div class="columns is-mobile">
+    <div class="column"></div>
+    <div class="column">
+        <div class="title">
+            Enter the job title you want
         </div>
-         <div class="navbar-end">
-           <div class="navbar-item">
-                <div class="buttons">
-                    <a class="button is-primary" href="index.html">
-                        Home
-                    </a>
-                    <a class="button is-light" href="actual.html">
-                        Get started
-                    </a>
-                </div>
-            </div>
-        </div>
-
-    </nav>
-<br>
-<br>
-<br>
-<br>
-
-<section class="section">
-    <div class="container">
-   
+<form action="#" method="post" class="box">
+    <div class="field">
+        <label class="label">Job title</label>
+        <p  class=""><input type="text" name="nm" class="input is-primary is large" /></p>
+        <br>
+	    <p><input type="submit" value="submit" class="button is-primary is-large"/></p>
     </div>
-
-</section>
-    <div class="columns is-mobile">
-        <div class="column"></div>
-        <div class="column">
-            <div class="title">
-                Enter the job title you want
-            </div>
-
-            <form class="box">
-                <div class="field">
-                  <label class="label">Job title</label>
-                  <div class="control">
-                    <input class="input is-primary is-large" type="text" placeholder="e.g. Rocket Scientist">
-                  </div>
-                </div>
-                
-                <nav class="bd-hello-buttons buttons">
-                    <a class="button is-primary is-large" href="#">
-                      <span>
-                        <strong>Submit</strong> 
-                      </span>
-                    </a>
-                  </nav>
-           
-              </form>
-
-        </div>
-
-        <div class="column">
+	</div>
+    <div class="column">
             
-        </div>
-  
-      </div>
-     
-</body>
-</html>
+    </div>
+</form>
+{% endblock %}
