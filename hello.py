@@ -11,6 +11,15 @@ results = [{'Job_Title': 'Software Engineer'}]
 def home():
     return render_template('index.html')
 
+@app.route("/zh")
+def zh():
+    return render_template('index-zh.html')
+
+@app.route("/en")
+def en():
+    return render_template('index.html')
+
+
 @app.route("/jobs", methods=["GET", "POST"])
 def jobs():
     if request.method == "POST":
